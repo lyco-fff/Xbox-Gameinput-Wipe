@@ -19,7 +19,7 @@ The script leverages NTFS ownership takeover combined with DACL manipulation via
 
 1. UAC Token Elevation
 2. Breaking TrustedInstaller protection (takeown.exe)
-3. Renaming System Binaries via Renaming (icacls.exe + Rename-Item)
+3. Stop System Binaries from reinstalling via Renaming (icacls.exe + Rename-Item)
 4. Directory Replacement / Explicit SID Write-Locking (icacls.exe /deny)
 
 Because Windows Kernel evaluates explicit >Deny ACEs before any >Allow entries, any subsequent installer or update service running as >SYSTEM immediately hits an Access Denied error when attempting to write files into those folders. 
