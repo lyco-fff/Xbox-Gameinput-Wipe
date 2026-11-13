@@ -4,7 +4,7 @@
 
 A windows batch / powershell script that force-wipes all Microsoft Xbox background services, GameBar overlays, and the Microsoft GameInput driver framework; locking the file systems so that they cannot restore themselves after a windows update or restart.
 Microsoft's GameInput service and GameDVR overlays notoriously clash with NVIDIA video drivers (NVENC hardware encoder), making it directly responsible complete GPU hangs.
-Unfortunately, Windows decides it good to make it so they forcefully reinstall themselves onto your computer silently, after the user uninstalls it for whatever reason.
+Unfortunately, Windows decides it was good idea to make it so they forcefully reinstall themselves onto your computer silently, after the user uninstalls it for whatever reason.
 
 **Set-up and Use**
 - Install the .bat
@@ -30,4 +30,6 @@ I run a 5070 on a older Z390 Chipset (2018). Though PCIe is backwards compatable
 I noticed through reliability monitor, that the time of crashes corresponded one-to-one with a reinstallation of XboxGamingServices, GameDVR(overlays), or Gameinput.
 Removing both fixed my issue.
 
-DISCLAIMER: RUN AT YOUR OWN RISK. I built this tool for personal use, and since I am the only real-world tester, YOU may run into unforeseen edge cases before I do. If you find a bug, please email me at peppereddd@gmail.com with the steps to reproduce the issue so I can test it and push a fix.
+**DISCLAIMER: RUN AT YOUR OWN RISK.**
+
+I built this tool for personal use, and since I am the only real-world tester, YOU may run into unforeseen edge cases before I do. If you find a bug, please email me at peppereddd@gmail.com with the steps to reproduce the issue so I can test it and push a fix.
